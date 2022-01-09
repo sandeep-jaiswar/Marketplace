@@ -1,0 +1,3 @@
+{
+  "mongoURI" : "mongodb+srv://SUPERUSER:SUPERUSER@cluster0.33raf.mongodb.net/MARKETPLACE?retryWrites=true&w=majority"
+}
