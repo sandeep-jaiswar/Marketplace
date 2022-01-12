@@ -8,8 +8,10 @@ if(cluster.isMaster){
   const cookieSession = require('cookie-session');
   const passport = require('passport');
   const bodyParser = require('body-parser');
-  const rootRoute = require('./routes/api')
+  const rootRoute = require('./routes/api');
+  const cors = require('cors');
   const app = express();
+  app.use(cors());
   app.use(bodyParser.json());
   app.use(cookieSession({
     maxAge: 30*24*60*60*1000,

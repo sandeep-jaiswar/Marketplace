@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node server",
-    "server": "nodemon server"
+    "server": "nodemon server",
+    "client": "npm run start --prefix client",
+    "build": "npm install --prefix client && npm run build --prefix client",
+    "start": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "sandeep.jaiswar",
   "license": "ISC",
@@ -14,6 +16,7 @@
     "body-parser": "^1.19.1",
     "config": "^3.3.6",
     "cookie-session": "^2.0.0",
+    "cors": "^2.8.5",
     "express": "^4.17.2",
     "express-validator": "^6.14.0",
     "gravatar": "^1.8.2",
