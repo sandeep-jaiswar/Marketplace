@@ -37,7 +37,7 @@ if (['production'].includes(process.env.NODE_ENV)) {
 }
 
 app.get('/api/current_user',(req,res)=>{
-  res.send('gotcha')
+  res.send('gotcha');
 })
 
 const PORT = process.env.PORT || 5000;
